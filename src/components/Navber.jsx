@@ -12,13 +12,13 @@ const Navber = () => {
     }   
      return (
         <nav className="flex max-w-6xl mt-5 items-center justify-between px-2 py-2 mx-auto">
-          <h2 className="text-2xl font-semibold dark:text-white">#NavigateUI</h2>
+          <Link to={'/'} className="text-2xl font-semibold dark:text-white">NotePad</Link>
           <ul className="flex items-center justify-between gap-4 text-slate-900 dark:text-gray-100 lg:gap-6">
               <li className="hover:underline">
-                  <Link to="/">Add Note</Link>
+                  <Link to="/add-node">Add Note</Link>
               </li>
               <li className="hover:underline">
-                  <Link to="/note-details">View Note</Link>
+                  <Link to="/view-all">View Note</Link>
               </li>
               <li className="hover:underline">
                   {
