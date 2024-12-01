@@ -5,6 +5,20 @@ const ViewAll = () => {
     const data = useLoaderData()
     const [note, setNote] = useState(data)
     console.log(data)
+
+    const handelDeleteItem = (id) => {
+        fetch(`http://localhost:5000/add-node/${id}`, {
+        method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.deletedCount){
+                const remining = note.filter( d => d._id !== id)
+                setNote(remining)
+            }
+        })
+    }
     return (
         <div>
            <div className='grid grid-cols-1 md:grid-cols-2 lg:gap-5 gap-5'>
@@ -18,8 +32,8 @@ const ViewAll = () => {
                         {/* <h3 className='bg-[#FBDA5F] px-2 py-1'></h3> */}
                         <p className=''>{data.topicmessage}</p>
                         <div>
-                            <Link className='bg-[#FBDA5F] px-4 py-2 text-black transition-colors'>Edit</Link>
-                            <button className='bg-[#FF6B6B] px-4 py-2 text-white transition-colors'>Delete</button>
+                            <Link to={'/view-all/edit'} className='bg-[#FBDA5F] px-4 py-2 text-black transition-colors'>Edit</Link>
+                            <button onClick={() => handelDeleteItem(data._id)} className='bg-[#FF6B6B] px-4 py-2 text-white transition-colors'>Delete</button>
                         </div>
                     </div>
                 ))

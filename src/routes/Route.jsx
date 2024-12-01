@@ -6,6 +6,7 @@ import Login from '../components/Login';
 import SignUp from '../components/SignUp';
 import AllNote from '../components/AddNote';
 import ViewAll from '../components/ViewAll';
+import EditNote from './../components/EditNote';
 
 const Route = () => {
     const route = createBrowserRouter([
@@ -29,6 +30,10 @@ const Route = () => {
                     path: '/view-all',
                     element: <ViewAll/>,
                     loader: () => fetch('http://localhost:5000/add-node')
+                },
+                {
+                    path: '/view-all/edit',
+                    element: <EditNote/>
                 }
             ]
         }
