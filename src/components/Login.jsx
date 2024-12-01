@@ -18,7 +18,7 @@ const Login = () => {
         const name = e.target.name.value;
         const email = e.target.email.value;
         const newUser = {name, email}
-        fetch('http://localhost:5000/login', {
+        fetch('https://notpad-server.vercel.app/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

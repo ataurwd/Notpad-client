@@ -11,7 +11,7 @@ const AllNote = () => {
         const topicmessage = e.target.message.value
         const topic = {topicName, topicmessage, topicTitle}
 
-        fetch('http://localhost:5000/add-node', {
+        fetch('https://notpad-server.vercel.app/add-node', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
