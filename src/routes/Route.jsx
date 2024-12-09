@@ -3,10 +3,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../components/Home";
 import MainLayout from "../layout/MainLayout";
 import Login from "../components/Login";
-import SignUp from "../components/SignUp";
 import AllNote from "../components/AddNote";
 import ViewAll from "../components/ViewAll";
 import EditNote from "./../components/EditNote";
+import PrivateRoute from "./PrivateRoute";
 
 const Route = () => {
   const route = createBrowserRouter([
@@ -20,7 +20,11 @@ const Route = () => {
         },
         {
           path: "/add-node",
-          element: <AllNote />,
+          element: (
+            <PrivateRoute>
+              <AllNote />
+            </PrivateRoute>
+          ),
         },
         {
           path: "/login",
@@ -28,8 +32,12 @@ const Route = () => {
         },
         {
           path: "/view-all",
-          element: <ViewAll />,
-          loader: () => fetch("https://notpad-server.vercel.app/add-node"),
+          element: (
+            <PrivateRoute>
+              <ViewAll />
+            </PrivateRoute>
+          ),
+          loader: () => fetch("http://localhost:4000/add-node"),
         },
         {
           path: "/view-all/edit/:id",
@@ -38,7 +46,8 @@ const Route = () => {
       ],
     },
   ]);
-  return <RouterProvider router={route} />;
+  return <RouterProvider router={route}>
+  </RouterProvider>;
 };
 
 export default Route;
