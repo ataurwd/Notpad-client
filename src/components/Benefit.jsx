@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 const Benefit = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <section className="py-16 px-4 bg-gray-100 dark:bg-gray-800 lg:px-20 md:px-14">
       <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center space-x-10">
         {/* Left Side: Image */}
         <div className="lg:w-1/2 mb-8 lg:mb-0">
           <img
-            src="https://img.freepik.com/free-vector/hand-drawn-employee-benefits-illustration_23-2149538426.jpg" 
+            data-aos="flip-left"
+            src="https://img.freepik.com/free-vector/hand-drawn-employee-benefits-illustration_23-2149538426.jpg"
             alt="Benefit Image"
             className="w-full h-[70vh] object-cover rounded-lg"
           />
@@ -15,17 +20,23 @@ const Benefit = () => {
 
         {/* Right Side: Content */}
         <div className="lg:w-1/2 text-center lg:text-left">
-          <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-4">
+          <h2
+            data-aos="flip-right"
+            className="text-5xl font-semibold text-gray-800 dark:text-white mb-4 font-rancho"
+          >
             The <span className="bg-webMain px-3">Benefits</span> of Our Service
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
+          <p
+            data-aos="flip-right"
+            className="text-gray-600 dark:text-gray-300 mb-6"
+          >
             Our service provides an excellent opportunity for growth and
             learning. Experience the benefits that will take your skills to the
             next level.
           </p>
 
           <ul className="space-y-4 text-left text-gray-700 dark:text-gray-200">
-            <li className="flex items-center">
+            <li data-aos="flip-right" className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -39,7 +50,7 @@ const Benefit = () => {
               </svg>
               <span>Improve your skills with real-world applications.</span>
             </li>
-            <li className="flex items-center">
+            <li data-aos="flip-right" className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -53,7 +64,7 @@ const Benefit = () => {
               </svg>
               <span>Access exclusive resources and tutorials.</span>
             </li>
-            <li className="flex items-center">
+            <li data-aos="flip-right" className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

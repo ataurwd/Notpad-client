@@ -38,9 +38,9 @@ const AllNote = () => {
       });
   };
   return (
-    <div>
+    <div className="my-10">
       <h2 className="text-center font-bold text-2xl underline">Add a note </h2>
-      <form onSubmit={addTopic} className="max-w-3xl mx-auto mt-5 space-y-6">
+      <form onSubmit={addTopic} className="max-w-3xl mx-auto space-y-6">
         <div className="space-y-2 text-sm text-zinc-700 dark:text-zinc-400">
           <label className="block font-medium" htmlFor="name">
             Topic Title

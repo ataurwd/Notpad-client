@@ -36,7 +36,7 @@ const HowWork = () => {
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white w-16 h-16 flex items-center justify-center rounded-full">
               1
             </div>
-            <h3 className="text-xl font-semibold mt-6">Create a New Note</h3>
+            <h3 className="text-3xl font-semibold mt-6 font-rancho">Create a New Note</h3>
             <p className="text-gray-600 mt-2">
               Click the 'Add Note' button to begin capturing your thoughts.
             </p>
@@ -50,7 +50,7 @@ const HowWork = () => {
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-green-500 text-white w-16 h-16 flex items-center justify-center rounded-full">
               2
             </div>
-            <h3 className="text-xl font-semibold mt-6">Organize Your Notes</h3>
+            <h3 className="text-3xl font-semibold mt-6 font-rancho">Organize Your Notes</h3>
             <p className="text-gray-600 mt-2">
               Categorize and arrange your notes for seamless organization.
             </p>
@@ -64,7 +64,7 @@ const HowWork = () => {
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white w-16 h-16 flex items-center justify-center rounded-full">
               3
             </div>
-            <h3 className="text-xl font-semibold mt-6">Edit and Update</h3>
+            <h3 className="text-3xl font-semibold mt-6 font-rancho">Edit and Update</h3>
             <p className="text-gray-600 mt-2">
               Make updates or enhance your notes whenever needed.
             </p>
@@ -78,7 +78,7 @@ const HowWork = () => {
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-red-500 text-white w-16 h-16 flex items-center justify-center rounded-full">
               4
             </div>
-            <h3 className="text-xl font-semibold mt-6">Access Anytime</h3>
+            <h3 className="text-3xl font-semibold mt-6 font-rancho">Access Anytime</h3>
             <p className="text-gray-600 mt-2">
               Enjoy 24/7 access to your notes on any device.
             </p>

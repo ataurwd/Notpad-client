@@ -34,7 +34,7 @@ const Navber = () => {
           {user ? (
             <button onClick={handelLogoutUser}>Logout</button>
           ) : (
-            <Link to="/login">Login</Link>
+            <Link to="/login" className="font-bold">Login</Link>
           )}
         </li>
       </ul>
