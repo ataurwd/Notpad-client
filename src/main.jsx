@@ -4,6 +4,8 @@ import './index.css'
 import Route from './routes/Route.jsx'
 import UserContext from './Context/UserContext.jsx'
 import { Toaster } from 'react-hot-toast'
+import 'aos/dist/aos.css';
+
 
 
 createRoot(document.getElementById('root')).render(

@@ -6,7 +6,7 @@ const MainLayout = () => {
     return (
         <div>
             <Navber/>
-            <div className='px-28 mt-10'>
+            <div className=''>
                 <Outlet/>
             </div>
         </div>

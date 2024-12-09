@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import HomeHeading from "./HomeHeading";
 
 const Home = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div><HomeHeading/></div>;
 };
 
 export default Home;

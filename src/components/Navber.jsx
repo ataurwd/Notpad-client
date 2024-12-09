@@ -10,8 +10,9 @@ const Navber = () => {
     });
   };
   return (
-    <nav className="flex max-w-6xl mt-5 items-center justify-between px-2 py-2 mx-auto">
-      <Link to={"/"} className="text-2xl font-semibold dark:text-white">
+      <nav className="bg-gradient-to-r from-[#FBDA5F] via-[#FBCB45]
+     to-[#FBA02F] flex py-5 lg:px-24 items-center justify-between px-2 mx-auto">
+      <Link to={"/"} className="text-2xl font-semibold dark:text-white font-rancho">
         NotePad
       </Link>
       <ul className="flex items-center justify-between gap-4 text-slate-900 dark:text-gray-100 lg:gap-6">
